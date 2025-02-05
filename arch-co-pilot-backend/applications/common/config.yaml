@@ -1,0 +1,44 @@
+chunk_dtls:
+    chunk_size: 3
+    chunk_overlap_percent: 10
+
+db_details:
+    db_cluster_arn: 'arn:aws:rds:us-east-1:051826696040:cluster:arch-copilot-aurora-postgresql-cluster'
+    db_secrets_arn: 'arn:aws:secretsmanager:us-east-1:051826696040:secret:rds-db-credentials/devx/prompt_embed_user-bZDEdx'
+    db_name: 'prompt_embedding'
+    
+     
+main_doc_table: 
+    name: 'doc_details'
+    df_cols: ['doc_summarization']
+    tbl_cols: ['document_id','document_name','document_filename','document_category','data_classification','document_access_group','document_source','document_owner','document_source_storage','document_source_link', 'doc_summarization']
+    
+
+main_embedd_table: 
+    name: 'doc_multimodal_embedding'
+    df_cols: ['chunk_number', 'image_description', 'embedding_type', 'image_filename', 'embedding_id', 'image_base64','multimodal_embedding']
+    tbl_cols: ['document_id', 'embedding_id','chunk_number','embedding_type','image_filename','image_base64','image_description','multimodal_embedding']
+    
+    
+search_embedd_table: 
+    name: 'doc_text_embedding'
+    df_cols: ['chunk_number', 'text_type', 'text_description', 'embedding_type', 'embedding_id', 'multimodal_embedding']
+    tbl_cols: ['document_id', 'embedding_id','chunk_number','embedding_type','text_type', 'text_description','multimodal_embedding']
+
+session_memory_table:
+    name: 'session_memory'
+    df_cols: ['user_id', 'session_id', 'user_question','user_doc','llm_response', 'response_images', 'response_doc_links', 'question_embedding']
+    tbl_cols: ['user_id', 'session_id', 'user_question','user_doc','llm_response', 'llm_response_sumarization','response_images', 'response_doc_links', 'session_timestamp', 'session_date', 'question_embedding']
+
+
+session_details:
+   session_length: 10
+   max_images: 3
+
+rag_response_hist_table:
+    name: 'rag_question_response_history'
+    
+models:
+    main_model: 'us.anthropic.claude-3-5-sonnet-20241022-v2:0'
+    main_model2: 'anthropic.claude-3-5-haiku-20241022-v1:0'
+    embedd_model: 'amazon.titan-embed-image-v1'

@@ -1,0 +1,5 @@
+models:
+    primary_model: 'us.anthropic.claude-3-5-sonnet-20241022-v2:0'
+    max_tokens: 10000
+    secondary_model: 'anthropic.claude-3-5-haiku-20241022-v1:0'
+    embedd_model: 'amazon.titan-embed-image-v1'
