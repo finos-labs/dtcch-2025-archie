@@ -1,0 +1,123 @@
+.chat {
+    box-sizing: border-box;
+}
+
+.chat-items-wrapper {
+    /* margin: 0 5%; */
+    padding: 20px 20px;
+    width: 80%;
+    margin: 0 auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.chat-item {
+    width: 100%;
+    margin: 35px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.chat-item.bot {
+    justify-content: left;
+}
+
+.chat-item.bot .icon {
+    width: 25px;
+    height: 23px;
+    background: #2b2424;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.chat-item.bot .icon img {
+    width: 24px;
+    height: 21px;
+    flex-shrink: 0;
+}
+
+.chat-msg {
+    display: inline-block;
+    margin-left: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #F5EAD9;
+    color: black;
+    word-break: break-word;
+    white-space: pre-wrap;
+    text-align: left;
+    font-family: Calibri;
+}
+
+.chat-item.bot .chat-msg {
+    background-color: #B8E0D5;
+    color: black;
+    font-family: Calibri;
+}
+
+.uploaded-file {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    color: gray;
+    padding-top: 10px;
+}
+
+.uploaded-file>div:nth-child(2) {
+    font-style: italic;
+    padding-left: 5px;
+    padding-bottom: 5px;
+}
+
+.loading-icon {
+    display: flex;
+    justify-content: center;
+    animation: rotation infinite 3s linear;
+    margin-top: 20px;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.chat-msg-img-wrapper {
+    margin-top: 20px;
+}
+
+.chat-msg-img-wrapper>div {
+    margin-top: 10px;
+}
+
+.chat-msg-img-wrapper img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 4px;
+}
+
+.chat-msg-ts {
+    color: gray;
+    font-size: 11px;
+    font-family: calibri;
+    margin-top: 5px;
+    margin-left: 20px;
+}
+
+.chat-msg-icon-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 7px 5px;
+}
+
+.chat-msg-icon-wrapper > div {
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,240 @@
+#mainpane-wrapper {
+    flex: 1;
+}
+
+#mainpane-wrapper>div {
+    display: flex;
+    flex-direction: column;
+}
+
+#mainpane-header {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    padding: 0px 20px;
+    box-shadow: 1px 2px 1px #f2f2f2;
+    flex-shrink: 0;
+    background-color: #0E5447;
+    color: white;
+}
+
+#app-name {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    font-family: Calibri;
+}
+
+#app-name span {
+    margin: 0px 5px 0px 25px;
+}
+
+#app-menu {
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 70px;
+}
+
+#app-menu>div {
+    margin: 0px 10px;
+    font-family: Calibri;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    color: white;
+}
+
+#mainpane-subheader {
+    display: flex;
+    flex-direction: row;
+    transition: height 0.5s;
+    width: 100%;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+#mainpane-subheader.open {
+    height: 170px;
+}
+
+#mainpane-subheader.close {
+    height: 0px;
+}
+
+#mainpane-subheader-tab {
+    width: 3%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#mainpane-subheader.close>#mainpane-subheader-tab>div {
+    display: none;
+}
+
+#mainpane-subheader-tab>div {
+    width: 30px;
+    height: 140px;
+    writing-mode: vertical-lr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e7dfd3;
+    color: black;
+    cursor: pointer;
+    box-shadow: 0px 1px 1px #F5EAD9;
+    border-radius: 2px;
+    font-weight: bold;
+}
+
+#mainpane-subheader-tab>.active {
+    background-color: #FFA700;
+    color: white;
+}
+
+#mainpane-subheader-tab>div>span:first-child {
+    padding-bottom: 10px;
+}
+
+#question-suggestion-wrapper {
+    width: 97%;
+}
+
+#question-suggestion-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+    box-sizing: border-box;
+    height: 100%;
+}
+
+#question-suggestion-wrapper>div:first-child {
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    height: 100%;
+    margin-top: 10px;
+}
+
+#question-suggestions {
+    width: 95%;
+}
+
+#question-suggestion-wrapper>div>div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex: 1;
+    height: 70%;
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding: 10px;
+    margin-right: 20px;
+    border: 1px solid #e5e5e5;
+    font-size: 14px;
+    font-weight: 500;
+    overflow: hidden;
+    color: #414141;
+    box-shadow: 1px 1px 9px #e1e1e1;
+    text-align: center;
+    background-color: #FBF9F4;
+}
+
+#question-suggestion-wrapper>div>div:hover {
+    background-color: #F5EAD9;
+    cursor: pointer;
+}
+
+#question-suggestion-wrapper>div>div>div {
+    word-break: break-word;
+}
+
+#question-suggestion-icon {
+    padding-right: 20px;
+}
+
+#suggestion-carousel-controller {
+    height: 20px;
+}
+
+#suggestion-carousel-controller>svg {
+    cursor: pointer;
+}
+
+#mainpane-chatwindow {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Menu Dropdown starts */
+.navbar {
+    overflow: hidden;
+    margin-top: 40px;
+    margin-right: 40px;
+}
+
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+    margin-top: 35px;
+    margin-left: 30px;
+}
+
+.dropdown .dropbtn {
+    font-size: 14px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 8px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Menu Dropdown ends */

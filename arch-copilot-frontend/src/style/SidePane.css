@@ -1,0 +1,129 @@
+#sidepane-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    background-color: #fbfbfb;
+    transition: width 0.5s;
+    flex-shrink: 0;
+    overflow: hidden;
+}
+
+#sidepane-wrapper.open {
+    width: 350px;
+}
+
+#sidepane-wrapper.close {
+    width: 0px;
+    visibility: hidden;
+}
+
+#sidepane-header {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 70px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    background-color: #FFA700;
+}
+
+#sidepane-body {
+    width: 100%;
+    flex: 1;
+    padding: 20px 0px 20px 5px;
+    box-sizing: border-box;
+    background-color: #F5EAD9;
+    overflow: hidden;
+}
+#prev-topic-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+#prev-topic-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 25px;
+    padding-bottom: 10px;
+    flex-shrink: 0;
+}
+
+#prev-topic-header>div {
+    padding-left: 10px;
+    color: gray;
+}
+
+#prev-topic-header>div:first-child {
+    padding-top: 7px;
+}
+
+#prev-topic-body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0px 10px 0 20px;
+    overflow-y: auto;
+    flex: 1;
+}
+
+#prev-topic-body>div {
+    height: 100%;
+}
+
+.prev-topic-period {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0px;
+    font-size: 22px;
+}
+
+.prev-topic-period>div {
+    padding-left: 10px;
+}
+
+.prev-topic-period-topic {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px 0px 10px 10px;
+    cursor: pointer;
+}
+
+.prev-topic-period-topic>div {
+    width: 100%;
+    padding-left: 10px;
+    font-style: italic;
+    font-size: 15px;
+    overflow: hidden;
+    height: 20px;
+}
+
+.prev-topic-period-topic:hover {
+    background-color: #c5c5c5;
+}
+
+#sidepane-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    color: gray;
+    background-color: #F5EAD9;
+}
+
+#sidepane-footer:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}

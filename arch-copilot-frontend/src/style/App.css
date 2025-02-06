@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    font-family: Calibri;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-width: 1000px;
+  }  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+  .full-vh {
+    height: 100vh;
+    overflow: hidden;
+  }
