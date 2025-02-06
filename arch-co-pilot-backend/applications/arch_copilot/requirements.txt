@@ -1,0 +1,13 @@
+uvicorn
+fastapi
+boto3
+pandas
+uuid
+pymupdf
+Pillow
+pypdfium2
+PyYAML
+opencv-python
+moviepy
+ffmpeg-python
+imageio

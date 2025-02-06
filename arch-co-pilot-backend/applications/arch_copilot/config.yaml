@@ -1,0 +1,24 @@
+
+models:
+    primary_model: 'us.anthropic.claude-3-5-sonnet-20241022-v2:0'
+    max_tokens: 10000
+    secondary_model: 'anthropic.claude-3-5-haiku-20241022-v1:0'
+    embedd_model: 'amazon.titan-embed-image-v1'
+
+event_details:
+    required_headers: ['eventdatetime', 'sessionid', 'userid', 'conversationtopic']
+
+output_details:
+    output_bucket: "arch-copilot-files-store"
+    output_key: "output_files"
+    audio_key: "output_audio_files"
+
+chunk_dtls:
+    chunk_size: 15
+    chunk_overlap_percent: 10
+
+
+session_details:
+   session_length: 5
+
+
